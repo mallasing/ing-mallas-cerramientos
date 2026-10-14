@@ -1,0 +1,1033 @@
+/* =====================================================
+   ING MALLAS Y CERRAMIENTOS
+   IDENTIDAD VERDE PETRÓLEO
+===================================================== */
+
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #263238;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+width: 100%;
+background: #123B63;
+color: #ffffff;
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 1px solid #2878B8;
+}
+
+.nav {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 6px;
+    color: #b8cfcc;
+}
+
+
+/* MENÚ */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #edf5f4;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #7bb8a8;
+}
+
+
+/* BOTÓN DEL MENÚ */
+
+.boton-nav {
+    background: #72a995;
+    color: #102c2a;
+    padding: 13px 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.boton-nav:hover {
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 680px;
+
+    background:
+        linear-gradient(
+            rgba(18, 60, 58, 0.82),
+            rgba(18, 60, 58, 0.82)
+        ),
+        url("imagenes/malla-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+}
+
+.hero-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #8fc4b3;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    max-width: 800px;
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1.05;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.hero h1 strong {
+    display: block;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+    color: #dce9e7;
+    margin-bottom: 40px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.boton {
+    display: inline-block;
+    padding: 16px 25px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.boton-principal {
+    background: #72a995;
+    color: #102c2a;
+}
+
+.boton-principal:hover {
+    background: #ffffff;
+}
+
+.boton-secundario {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.boton-secundario {
+background: #ffffff;
+color: #123B63;
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.seccion {
+    padding: 110px 0;
+}
+
+.subtitulo {
+    display: block;
+    color: #3f7d72;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.seccion h2,
+.porque h2 {
+    max-width: 850px;
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.1;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.seccion h2 strong,
+.porque h2 strong {
+font-weight: 800;
+color: #123B63;
+}
+
+.seccion p {
+    max-width: 800px;
+    font-size: 17px;
+    color: #667477;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.productos {
+    background: #f1f4f3;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.tarjeta {
+    background: #ffffff;
+    padding: 40px;
+    min-height: 280px;
+    border: 1px solid #d9e2e0;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 40px rgba(18, 60, 58, 0.12);
+}
+
+.tarjeta > span {
+    color: #4e8c7e;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.tarjeta h3 {
+    margin: 25px 0 15px;
+    font-size: 25px;
+    color: #183b39;
+}
+
+.tarjeta p {
+    font-size: 15px;
+    color: #667477;
+}
+
+
+/* =====================================================
+   SERVICIOS
+===================================================== */
+
+.servicios {
+    background: #183b39;
+    color: #ffffff;
+}
+
+.servicios .subtitulo {
+    color: #8fc4b3;
+}
+
+.servicios h2 {
+    color: #ffffff;
+}
+
+.servicios h2 strong {
+    color: #ffffff;
+}
+
+.servicios .tarjeta {
+    background: #214744;
+    border: 1px solid #32625e;
+}
+
+.servicios .tarjeta h3 {
+    color: #ffffff;
+}
+
+.servicios .tarjeta p {
+    color: #c1d1ce;
+}
+
+.servicios .tarjeta:hover {
+    border-color: #72a995;
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria-item h3 {
+    margin: 0;
+    padding: 18px 20px;
+    color: #183b39;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .galeria-item img {
+        height: 230px;
+    }
+}
+
+/* =====================================================
+   POR QUÉ ELEGIRNOS
+===================================================== */
+
+.porque {
+padding: 110px 0;
+background: #F2F6FA;
+color: #123B63;
+}
+
+.porque .subtitulo {
+color: #2878B8;
+}
+
+.porque h2 strong {
+color: #123B63;
+}
+.porque-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.porque-grid div {
+padding: 25px;
+border-top: 2px solid #2878B8;
+}
+
+.porque-grid strong {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.porque-grid span {
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+.contacto {
+    background: #f1f4f3;
+}
+
+.formulario {
+    max-width: 750px;
+    margin-top: 45px;
+    display: grid;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    border: 1px solid #ccd8d5;
+    background: #ffffff;
+    padding: 17px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #4e8c7e;
+}
+
+.formulario button {
+width: fit-content;
+border: none;
+background: #123B63;
+color: #ffffff;
+padding: 17px 25px;
+font-size: 13px;
+font-weight: 800;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.formulario button {
+background: #2878B8;
+color: #ffffff;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: #0e2928;
+    color: #ffffff;
+    padding: 70px 0 30px;
+}
+
+.footer .logo {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #aabdb9;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.footer p:last-child {
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
+    }
+
+    .boton-nav {
+        display: none;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .porque-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .nav {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-contenido {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .seccion {
+        padding: 75px 0;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item {
+        min-height: 220px;
+    }
+
+    .porque {
+        padding: 75px 0;
+    }
+
+    .porque-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario button {
+        width: 100%;
+    }
+
+}
+
+/* SECCIÓN POR QUÉ ELEGIRNOS */
+
+.seccion-ventajas {
+    background: #f3f7f6;
+}
+
+.texto-ventajas {
+    max-width: 760px;
+    margin: 20px auto 0;
+    text-align: center;
+    color: #667477;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.ventajas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 40px;
+}
+
+.ventajas-grid .tarjeta {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: auto;
+}
+
+@media (max-width: 600px) {
+    .ventajas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ventajas-grid .tarjeta {
+        padding: 25px;
+    }
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: #f3f7f6;
+}
+
+.contacto-contenido > h2,
+.contacto-contenido > .subtitulo,
+.contacto-descripcion {
+    text-align: center;
+}
+
+.contacto-descripcion {
+    max-width: 720px;
+    margin: 20px auto 40px;
+    color: #667477;
+    line-height: 1.8;
+}
+
+.contacto-tarjeta {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #d9e2e0;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(18, 60, 58, 0.08);
+}
+
+.contacto-info {
+    padding: 15px 5px;
+}
+
+.contacto-etiqueta {
+    color: #4e8c7e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.contacto-info h3 {
+    margin: 20px 0;
+    color: #183b39;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.contacto-info p,
+.contacto-lista {
+    color: #667477;
+    line-height: 1.8;
+}
+
+.contacto-lista {
+    padding-left: 20px;
+    margin-top: 25px;
+}
+
+.contacto-lista li {
+    margin-bottom: 15px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario label {
+    color: #183b39;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d4dfdc;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #183b39;
+    font: inherit;
+    font-size: 14px;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid #4e8c7e;
+    outline-offset: 1px;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 10px;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #183b39;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formulario button:hover {
+    background: #4e8c7e;
+}
+
+.formulario small {
+    color: #667477;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 750px) {
+    .contacto-tarjeta {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
+    .contacto-info h3 {
+        font-size: 24px;
+    }
+}
+
+/* ENVÍOS NACIONALES */
+
+.envios-nacionales {
+    background: #183b39;
+    color: #ffffff;
+    padding: 45px 20px;
+}
+
+.envios-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.envios-icono {
+    width: 90px;
+    min-width: 90px;
+    color: #8bc5b3;
+}
+
+.envios-icono svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.envios-texto {
+    flex: 1;
+}
+
+.envios-texto .subtitulo {
+    color: #8bc5b3;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.envios-texto h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.envios-texto h2 strong {
+    color: #8bc5b3;
+}
+
+.envios-texto p {
+    color: #e0e9e7;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.boton-envios {
+    display: inline-block;
+    padding: 15px 22px;
+    border: 1px solid #8bc5b3;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.boton-envios:hover {
+    background: #4e8c7e;
+}
+
+@media (max-width: 700px) {
+    .envios-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .envios-icono {
+        width: 75px;
+        min-width: 75px;
+    }
+
+    .envios-texto h2 {
+        font-size: 24px;
+    }
+}
+
+/* MENÚ SUPERIOR MÁS LIMPIO */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4e8c7e;
+}
+
+/* MENÚ ADAPTABLE PARA PANTALLAS PEQUEÑAS */
+
+@media (max-width: 900px) {
+    nav {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
+
+#contacto {
+    scroll-margin-top: 180px;
+}
+
+#envios {
+    scroll-margin-top: 160px;
+}
+
+/* =====================================================
+UBICACIÓN
+===================================================== */
+
+.ubicacion {
+padding: 90px 0;
+background: #F2F6FA;
+color: #123B63;
+text-align: center;
+}
+
+.ubicacion .subtitulo {
+color: #2878B8;
+font-size: 13px;
+font-weight: 800;
+letter-spacing: 2px;
+}
+
+.ubicacion h2 {
+font-size: 38px;
+margin: 10px 0 20px;
+}
+
+.ubicacion h2 strong {
+color: #123B63;
+}
+
+.ubicacion-descripcion {
+max-width: 650px;
+margin: 0 auto 35px;
+color: #526170;
+}
+
+.ubicacion-tarjeta {
+max-width: 600px;
+margin: auto;
+padding: 40px 25px;
+background: #FFFFFF;
+border: 1px solid #DCE6EF;
+border-radius: 12px;
+box-shadow: 0 8px 25px rgba(18, 59, 99, 0.08);
+}
+
+.ubicacion-icono {
+font-size: 38px;
+margin-bottom: 12px;
+}
+
+.ubicacion-tarjeta h3 {
+color: #123B63;
+font-size: 23px;
+margin-bottom: 10px;
+}
+
+.ubicacion-tarjeta p {
+color: #526170;
+margin-bottom: 25px;
+}
+
+.boton-ubicacion {
+display: inline-block;
+background: #123B63;
+color: #FFFFFF;
+padding: 14px 24px;
+font-size: 13px;
+font-weight: 800;
+transition: 0.3s;
+}
+
+.boton-ubicacion {
+background: #2878B8;
+color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+.ubicacion {
+padding: 65px 0;
+}
+
+.ubicacion h2 {
+    font-size: 30px;
+}
+
+}
+
+/* =====================================================
+MENU DESPLEGABLE EN PC Y CELULAR
+===================================================== */
+
+.menu-flotante-movil {
+    display: block !important;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 2000;
+}
+
+#boton-menu-flotante {
+background: #123B63;
+color: #FFFFFF;
+border: 1px solid #2878B8;
+border-radius: 6px;
+padding: 10px 14px;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+}
+
+#boton-menu-flotante {
+background: #2878B8;
+}
+
+.opciones-menu-flotante[hidden] {
+    display: none !important;
+}
+
+.opciones-menu-flotante([hidden]) {
+display: flex;
+flex-direction: column;
+position: absolute;
+top: calc(100% + 8px);
+right: 0;
+min-width: 230px;
+background: #FFFFFF;
+border: 1px solid #DCE6EF;
+border-radius: 8px;
+box-shadow: 0 8px 24px rgba(18, 59, 99, 0.18);
+overflow: hidden;
+}
+
+.opciones-menu-flotante a {
+display: block;
+padding: 12px 16px;
+color: #123B63;
+font-size: 14px;
+text-decoration: none;
+}
+
+.opciones-menu-flotante a {
+background: #F2F6FA;
+color: #2878B8;
+}

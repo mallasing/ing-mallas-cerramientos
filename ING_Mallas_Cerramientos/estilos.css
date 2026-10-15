@@ -1013,60 +1013,172 @@ padding: 65px 0;
 
 }
 
-/* =====================================================
-MENU DESPLEGABLE EN PC Y CELULAR
-===================================================== */
+/* MENÚ DESPLEGABLE EN PC Y CELULAR */
 
 .menu-flotante-movil {
     display: block !important;
     position: fixed;
-    top: 90px;
     right: 20px;
-    z-index: 2000;
+    bottom: 20px;
+    top: auto;
+    z-index: 9999;
 }
 
 #boton-menu-flotante {
-background: #123B63;
-color: #FFFFFF;
-border: 1px solid #2878B8;
-border-radius: 6px;
-padding: 10px 14px;
-font-size: 14px;
-font-weight: 700;
-cursor: pointer;
-}
-
-#boton-menu-flotante {
-background: #2878B8;
+    background: #123B63;
+    color: #FFFFFF;
+    border: 1px solid #2878B8;
+    border-radius: 30px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(18, 59, 99, 0.2);
 }
 
 .opciones-menu-flotante[hidden] {
     display: none !important;
 }
 
-.opciones-menu-flotante([hidden]) {
-display: flex;
-flex-direction: column;
-position: absolute;
-top: calc(100% + 8px);
-right: 0;
-min-width: 230px;
-background: #FFFFFF;
-border: 1px solid #DCE6EF;
-border-radius: 8px;
-box-shadow: 0 8px 24px rgba(18, 59, 99, 0.18);
-overflow: hidden;
+.opciones-menu-flotante {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    width: 250px;
+    max-width: calc(100vw - 40px);
+    max-height: 70vh;
+    overflow-y: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: #FFFFFF;
+    border: 1px solid #DCE6EF;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(18, 59, 99, 0.18);
+}
+
+.opciones-menu-flotante:not([hidden]) {
+    display: flex !important;
 }
 
 .opciones-menu-flotante a {
-display: block;
-padding: 12px 16px;
-color: #123B63;
-font-size: 14px;
-text-decoration: none;
+    display: block !important;
+    padding: 12px 16px;
+    color: #123B63;
+    background: #FFFFFF;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: normal;
+    border-bottom: 1px solid #EDF4FA;
 }
 
-.opciones-menu-flotante a {
-background: #F2F6FA;
-color: #2878B8;
+.opciones-menu-flotante a:hover {
+    background: #EDF4FA;
+    color: #2878B8;
+}
+
+/* En computador: solo las cinco secciones adicionales */
+@media (min-width: 901px) {
+    #opciones-menu-flotante a[href="#inicio"],
+    #opciones-menu-flotante a[href="#nosotros"],
+    #opciones-menu-flotante a[href="#productos"],
+    #opciones-menu-flotante a[href="#contacto"] {
+        display: none !important;
+    }
+}
+
+/* En celular: mostrar las nueve opciones */
+@media (max-width: 900px) {
+    .menu-flotante-movil {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .opciones-menu-flotante {
+        width: 260px;
+        max-width: calc(100vw - 28px);
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    #opciones-menu-flotante a {
+        display: block !important;
+    }
+}
+
+/* RECUPERAR MENU FLOTANTE EN PC Y CELULAR */
+
+.menu-flotante-movil {
+    display: block !important;
+    position: fixed !important;
+    right: 20px;
+    bottom: 20px;
+    top: auto !important;
+    z-index: 99999 !important;
+}
+
+#boton-menu-flotante {
+    display: inline-block !important;
+    background: #123B63 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #2878B8;
+    border-radius: 30px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#opciones-menu-flotante[hidden] {
+    display: none !important;
+}
+
+#opciones-menu-flotante:not([hidden]) {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    width: 250px;
+    max-width: calc(100vw - 30px);
+    max-height: 70vh;
+    overflow-y: auto;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    background: #FFFFFF;
+    border: 1px solid #DCE6EF;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(18, 59, 99, 0.18);
+}
+
+#opciones-menu-flotante a {
+    display: block !important;
+    padding: 12px 16px;
+    color: #123B63 !important;
+    background: #FFFFFF;
+    text-decoration: none;
+    white-space: normal;
+    border-bottom: 1px solid #EDF4FA;
+}
+
+/* PC: ocultar del flotante los cuatro botones principales */
+@media (min-width: 901px) {
+    #opciones-menu-flotante a[href="#inicio"],
+    #opciones-menu-flotante a[href="#nosotros"],
+    #opciones-menu-flotante a[href="#productos"],
+    #opciones-menu-flotante a[href="#contacto"] {
+        display: none !important;
+    }
+}
+
+/* CELULAR: mostrar todas las opciones */
+@media (max-width: 900px) {
+    .menu-flotante-movil {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    #opciones-menu-flotante a {
+        display: block !important;
+    }
 }
